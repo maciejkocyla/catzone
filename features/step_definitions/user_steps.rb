@@ -17,3 +17,12 @@ Given /^I am a logged in (.*)$/ do |user|
   click_button "Log in"
 
 end
+
+Then(/^I should see log in option$/) do
+  page.has_content?('Log in')
+end
+
+Given(/^I go to top ten this week path$/) do
+  visit('/top_last_week')
+end
+

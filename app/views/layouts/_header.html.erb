@@ -1,5 +1,9 @@
 <nav class="row navbar navbar-default">
-  <a class="navbar-brand col-md-2 text-center" href="/">Catzone</a>
+  <% if user_signed_in? && current_user.admin %>
+    <%= link_to "Catzone", cats_path, class: "navbar-brand col-md-2 text-center" %>
+  <% else %>
+    <%= link_to "Catzone", root_path, class: "navbar-brand col-md-2 text-center" %>
+  <% end %>
   <div class="col-md-2">
     <%= link_to "top 10 today", top_today_path, class: "btn btn-large"%>
   </div>
