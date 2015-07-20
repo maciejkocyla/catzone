@@ -1,0 +1,10 @@
+<h2 class="text-center">Cats index</h2>
+<div class="container jumbotron infinite-table">
+  <table>
+    <%= render :partial => 'cats', :object => @cats %>
+  </table>
+  <p class="pagination">
+    <%= link_to_next_page(@cats, 'Next Page', :remote => true) %>
+    pagination
+  </p>
+</div>

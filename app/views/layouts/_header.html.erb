@@ -1,0 +1,18 @@
+<nav class="row navbar navbar-default">
+  <a class="navbar-brand col-md-2 text-center" href="/">Catzone</a>
+  <div class="col-md-2">
+    <%= link_to "top 10 today", top_today_path, class: "btn btn-large"%>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "top 10 this week", top_last_week_path, class: "btn btn-large"%>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "top 10 this month", top_last_month_path, class: "btn btn-large"%>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "top 10 ever!", top_ever_path, class: "btn btn-large"%>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "log out", destroy_user_session_path, method: 'delete', class: "btn btn-large"%>    
+  </div>
+</nav>

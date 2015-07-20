@@ -1,0 +1,10 @@
+Flickr credentials: 
+
+catzone
+Key:
+24136702cabc673f44ff21d2cbc5b84d
+
+Secret:
+95fc072301938e0c
+
+https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=24136702cabc673f44ff21d2cbc5b84d&text=cat

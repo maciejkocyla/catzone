@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :cats
+  devise_for :users
+  
+  root 'cats#cat_mark'
+  post 'add_sweetness/:id' => 'cats#add_sweetness'
+  
+  get 'top_today' => 'cats#top_today'
+  get 'top_last_week' => 'cats#top_last_week'
+  get 'top_last_month' => 'cats#top_last_month'
+  get 'top_ever' => 'cats#top_ever'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

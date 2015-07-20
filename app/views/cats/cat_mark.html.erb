@@ -1,0 +1,17 @@
+<div class="container jumbotron">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Which one do you prefer?</h1>
+    </div>
+    <div class="col-md-1"></div>
+    <% if @cat%>
+      <% @cat.each_with_index do |cat, index|%>
+        <div class="col-md-5 cat_mark <% if index % 2 == 1 then %>col-md-offset-1 <% end %>" data-cat-id="<%= cat.id%>">
+          <%= image_tag cat.picture.url, width: '80%', height: 'auto' %>
+        </div>
+      <% end %>
+    <% else %>
+      There are no cats yet!
+    <% end %>
+  </div>
+</div>

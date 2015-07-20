@@ -1,0 +1,13 @@
+<% @cats.each_with_index do |cat, index| %>
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag cat.picture.url, width: '100%', height: 'auto' %>
+    </div>
+
+    <div class="col-md-8">
+      <h3><%= cat.name%></h3><br />
+      sweetness: <%= cat.sweets%>
+    </div>
+  </div>
+  <br />
+<% end %>
